@@ -22,6 +22,8 @@ struct SearchBarComponent: View {
                 .padding()
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
+                .foregroundColor(.black)
+                .accentColor(Color.gray)
                 .cornerRadius(8)
                 .overlay(
                     HStack {

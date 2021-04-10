@@ -16,12 +16,21 @@ class StackStore: ObservableObject {
     var cancellationToken: AnyCancellable?
     var stacksFetched = PassthroughSubject<Void, Never>()
 
-    func getContacts() {
-        cancellationToken = StackApi.getStacks()
-            .sink(receiveCompletion: { _ in
-            },
+    func getStacks(searchText: String) {
+        cancellationToken = StackApi.getStacks(searchText: searchText)
+            .sink(
+                receiveCompletion: ({ (completion) in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        print("\(error)")
+                    }
+                }),
             receiveValue: {
-                self.stacks = $0
+                if !$0.items.isEmpty {
+                    self.stacks = $0.items 
+                }
                 self.stacksFetched.send()
             })
     }

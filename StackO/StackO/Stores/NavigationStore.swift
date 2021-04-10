@@ -12,9 +12,8 @@ class NavigationStore: ObservableObject {
     enum Screen {
         case none
         case main
-        case contacts
-        case contact
-        case map
+        case stacks
+        case stack
     }
 
     @Published var screen: Screen = .none

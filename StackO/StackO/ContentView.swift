@@ -13,8 +13,9 @@ struct ContentView: View {
     var body: some View {
 
         ZStack{
-            ViewComponent(screen: .main, view: AnyView(StacksView()))
-            ViewComponent(screen: .contacts, view: AnyView(StackView()))
+            ViewComponent(screen: .main, view: AnyView(MainView()))
+            ViewComponent(screen: .stacks, view: AnyView(StacksView()))
+            ViewComponent(screen: .stack, view: AnyView(StackView()))
         }
         .onAppear {
             self.navigationStore.navigate(screen: .main)

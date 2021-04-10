@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */; };
 		AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A72621CE580047A030 /* StackOApp.swift */; };
 		AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A92621CE580047A030 /* ContentView.swift */; };
 		AA13C6AC2621CE590047A030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA13C6AB2621CE590047A030 /* Assets.xcassets */; };
@@ -24,6 +25,9 @@
 		AA13C71D2621DB350047A030 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C71C2621DB350047A030 /* SearchBarComponent.swift */; };
 		AA13C7252621DB400047A030 /* ViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7242621DB400047A030 /* ViewComponent.swift */; };
 		AA13C72A2621DB570047A030 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7292621DB570047A030 /* BindingExtension.swift */; };
+		AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7312621DBF90047A030 /* BackgroundComponent.swift */; };
+		AA13C7372621DD030047A030 /* DeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7362621DD030047A030 /* DeviceExtensions.swift */; };
+		AA13C73C2621E1050047A030 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C73B2621E1050047A030 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AA13C6A42621CE580047A030 /* StackO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA13C6A72621CE580047A030 /* StackOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOApp.swift; sourceTree = "<group>"; };
 		AA13C6A92621CE580047A030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +72,9 @@
 		AA13C71C2621DB350047A030 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		AA13C7242621DB400047A030 /* ViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComponent.swift; sourceTree = "<group>"; };
 		AA13C7292621DB570047A030 /* BindingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		AA13C7312621DBF90047A030 /* BackgroundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundComponent.swift; sourceTree = "<group>"; };
+		AA13C7362621DD030047A030 /* DeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtensions.swift; sourceTree = "<group>"; };
+		AA13C73B2621E1050047A030 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,7 @@
 			children = (
 				AA13C6F32621D0DC0047A030 /* StacksView.swift */,
 				AA13C6FB2621D0E70047A030 /* StackView.swift */,
+				AA13C73B2621E1050047A030 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +207,8 @@
 				AA13C7112621D9A60047A030 /* ImageLoader.swift */,
 				AA13C7162621D9E50047A030 /* ShimmerView.swift */,
 				AA13C7292621DB570047A030 /* BindingExtension.swift */,
+				AA13C7362621DD030047A030 /* DeviceExtensions.swift */,
+				AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +218,7 @@
 			children = (
 				AA13C71C2621DB350047A030 /* SearchBarComponent.swift */,
 				AA13C7242621DB400047A030 /* ViewComponent.swift */,
+				AA13C7312621DBF90047A030 /* BackgroundComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -340,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA13C7372621DD030047A030 /* DeviceExtensions.swift in Sources */,
 				AA13C6D72621CEBB0047A030 /* NavigationStore.swift in Sources */,
 				AA13C72A2621DB570047A030 /* BindingExtension.swift in Sources */,
 				AA13C71D2621DB350047A030 /* SearchBarComponent.swift in Sources */,
@@ -348,9 +361,12 @@
 				AA13C6EB2621CF6E0047A030 /* ApiService.swift in Sources */,
 				AA13C6FC2621D0E70047A030 /* StackView.swift in Sources */,
 				AA13C6F42621D0DC0047A030 /* StacksView.swift in Sources */,
+				AA13C73C2621E1050047A030 /* MainView.swift in Sources */,
 				AA13C7122621D9A60047A030 /* ImageLoader.swift in Sources */,
 				AA13C7252621DB400047A030 /* ViewComponent.swift in Sources */,
+				AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */,
 				AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */,
+				AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */,
 				AA13C6DF2621CEDA0047A030 /* StackStore.swift in Sources */,
 				AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */,
 			);

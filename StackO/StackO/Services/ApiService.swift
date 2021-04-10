@@ -33,7 +33,9 @@ enum StackApi {
 extension StackApi {
 
     static func getStacks(searchText: String) -> AnyPublisher<StackModel, Error> {
-        var request = URLRequest(url:  URL(string: "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=" + searchText + "%203&site=stackoverflow&filter=withbody")!)
+        var search = searchText
+        while search.last?.isWhitespace == true { search = String(search.dropLast()) }
+        var request = URLRequest(url:  URL(string: "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=" + search + "%203&site=stackoverflow&filter=withbody")!)
         let headers = [
             // "Authorization": "Bearer \(accessToken)",
             "Accept": "*/*",

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */; };
+		AA03E9A4262200B500AE27BF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03E9A3262200B500AE27BF /* WebView.swift */; };
 		AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A72621CE580047A030 /* StackOApp.swift */; };
 		AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A92621CE580047A030 /* ContentView.swift */; };
 		AA13C6AC2621CE590047A030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA13C6AB2621CE590047A030 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		AA03E9A3262200B500AE27BF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AA13C6A42621CE580047A030 /* StackO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA13C6A72621CE580047A030 /* StackOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOApp.swift; sourceTree = "<group>"; };
 		AA13C6A92621CE580047A030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				AA13C6F32621D0DC0047A030 /* StacksView.swift */,
 				AA13C6FB2621D0E70047A030 /* StackView.swift */,
 				AA13C73B2621E1050047A030 /* MainView.swift */,
+				AA03E9A3262200B500AE27BF /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */,
 				AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */,
 				AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */,
+				AA03E9A4262200B500AE27BF /* WebView.swift in Sources */,
 				AA13C6DF2621CEDA0047A030 /* StackStore.swift in Sources */,
 				AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */,
 			);

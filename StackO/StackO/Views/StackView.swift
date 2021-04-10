@@ -10,16 +10,42 @@ import SwiftUI
 
 
 struct StackView: View {
+    @EnvironmentObject var stackStore: StackStore
+
     var body: some View {
         ZStack{
-            BackgroundComponent()
+            Color.white.edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
                 HeaderView()
+                TitleView()
+                WebView(text: .constant(self.stackStore.stack?.body ?? "No available content"))
+                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .padding()
             }
+            .padding(0)
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
 
+private struct TitleView: View {
+    @EnvironmentObject var stackStore: StackStore
+    var body: some View {
+        HStack{
+            Text(self.stackStore.stack?.title ?? "No available title")
+                .font(.body)
+                .bold()
+                .foregroundColor(Color("LightGray"))
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+                .padding()
+        }
+        .padding(0)
+        .background(Color(.systemGray5))
+        .frame(minWidth: 0,  maxWidth: .infinity)
+
+    }
+}
 
 private struct HeaderView: View {
     @EnvironmentObject var navigationStore: NavigationStore

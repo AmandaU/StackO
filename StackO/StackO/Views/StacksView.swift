@@ -20,17 +20,17 @@ struct StacksView: View {
                 ZStack {
                     VStack {
                         Spacer()
-                    Text("Stack Overflow Search")
-                        .font(.body)
-                        .bold()
-                        .frame(alignment: .center)
-                        .foregroundColor(Color("LightGray"))
-                        .fixedSize(horizontal: false, vertical: true)
+                        Text("Stack Overflow Search")
+                            .font(.body)
+                            .bold()
+                            .frame(alignment: .center)
+                            .foregroundColor(Color("LightGray"))
+                            .fixedSize(horizontal: false, vertical: true)
                         Spacer()
                     }
-                ScrollView() {
+                    ScrollView() {
 
-                    ForEach(self.stackStore.stacks, id: \.owner.user_id) { item in
+                        ForEach(self.stackStore.stacks, id: \.owner.user_id) { item in
 
                             HStack(spacing: 5) {
                                 Image(systemName: "checkmark")
@@ -80,10 +80,11 @@ struct StacksView: View {
                             .padding(.horizontal, 5)
                             .frame(minWidth: 0,  maxWidth: .infinity)
 
+                        }
                     }
+                    .background(Color(.systemGray6))
                 }
-                }
-                }
+            }
             .edgesIgnoringSafeArea(.top)
         }
     }

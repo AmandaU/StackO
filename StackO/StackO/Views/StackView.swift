@@ -21,6 +21,7 @@ struct StackView: View {
                 WebView(text: .constant(self.stackStore.stack?.body ?? "No available content"))
                      .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                     .padding()
+                AuthorView()
             }
             .padding(0)
             .edgesIgnoringSafeArea(.all)
@@ -40,10 +41,9 @@ private struct TitleView: View {
                 .multilineTextAlignment(.leading)
                 .padding()
         }
+        .frame(minWidth: 0,  maxWidth: .infinity)
         .padding(0)
         .background(Color(.systemGray5))
-        .frame(minWidth: 0,  maxWidth: .infinity)
-
     }
 }
 
@@ -91,3 +91,74 @@ private struct HeaderView: View {
         .background( Color("StackBlue"))
     }
 }
+
+private struct AuthorView: View {
+    @EnvironmentObject var navigationStore: NavigationStore
+    @EnvironmentObject var stackStore: StackStore
+
+    var tags: String {
+        return self.stackStore.stack?.tags.map { String($0) }.joined(separator: ", ") ?? ""
+    }
+
+    var askedDate: String {
+        let epocTime = TimeInterval(self.stackStore.stack?.creation_date ?? 0)
+        let myDate =  Date(timeIntervalSince1970: epocTime)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .full
+        formatter.timeStyle = .short
+        return "asked \(formatter.string(from: myDate))"
+    }
+
+
+    var body: some View {
+
+        VStack {
+            Divider()
+            Text(self.tags)
+                .font(.caption)
+                .foregroundColor(Color("LightGray"))
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: false)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+            Divider()
+             HStack(spacing: 0) {
+                ImageView(withURL: self.stackStore.stack?.owner.profile_image ?? "", width: .constant(40), height: .constant(40))
+                    .padding(.leading)
+                    .frame(alignment: .leading)
+                VStack(alignment: .leading, spacing: 0) {
+                    Text(self.stackStore.stack?.owner.display_name ?? "No name available")
+                        .font(.caption)
+                        .foregroundColor(Color("LightGray"))
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("\(self.stackStore.stack?.owner.reputation ?? 0)")
+                        .font(.caption)
+                        .bold()
+                        .foregroundColor(Color("LightGray"))
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(self.askedDate)
+                        .font(.caption)
+                        .foregroundColor(Color("LightGray"))
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(7)
+                .frame(alignment: .leading)
+                Spacer()
+            }
+             .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+            .background(Color(.systemGray5))
+             .padding(.top, -8)
+
+        }
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .padding(0)
+    }
+}
+

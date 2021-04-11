@@ -12,11 +12,13 @@ import SwiftUI
 class StackStore: ObservableObject {
     @Published var stacks = [Stack]()
     @Published var stack: Stack?
+    @Published var isLoading = false
   
     var cancellationToken: AnyCancellable?
     var stacksFetched = PassthroughSubject<Void, Never>()
 
     func getStacks(searchText: String) {
+
         cancellationToken = StackApi.getStacks(searchText: searchText)
             .sink(
                 receiveCompletion: ({ (completion) in
@@ -29,7 +31,7 @@ class StackStore: ObservableObject {
                 }),
             receiveValue: {
                 if !$0.items.isEmpty {
-                    self.stacks = $0.items 
+                    self.stacks = $0.items
                 }
                 self.stacksFetched.send()
             })

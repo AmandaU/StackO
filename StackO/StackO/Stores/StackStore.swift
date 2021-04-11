@@ -18,7 +18,7 @@ class StackStore: ObservableObject {
     var stacksFetched = PassthroughSubject<Bool, Never>()
 
     func getStacks(searchText: String) {
-
+        self.isLoading = true
         cancellationToken = StackApi.getStacks(searchText: searchText)
             .sink(
                 receiveCompletion: ({ (completion) in
@@ -27,6 +27,7 @@ class StackStore: ObservableObject {
                         break
                     case .failure(let error):
                         print("\(error)")
+                        self.isLoading = false
                         self.stacksFetched.send(false)
                     }
                 }),
@@ -34,6 +35,7 @@ class StackStore: ObservableObject {
                 if !$0.items.isEmpty {
                     self.stacks = $0.items
                 }
+                self.isLoading = false
                 self.stacksFetched.send(true)
             })
     }

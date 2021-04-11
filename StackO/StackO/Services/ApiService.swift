@@ -33,10 +33,8 @@ enum StackApi {
 extension StackApi {
 
     static func getStacks(searchText: String) -> AnyPublisher<StackModel, Error> {
-        var search = searchText
-       // while search.last?.isWhitespace == true { search = String(search.dropLast()) }
         var request = URLRequest(url:  URL(string: "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=" +
-                                            search.replacingOccurrences(of: " ", with: "%20") +
+                                            searchText.replacingOccurrences(of: " ", with: "%20") +
                                             "&site=stackoverflow&filter=withbody")!)
         print(request.url)
 

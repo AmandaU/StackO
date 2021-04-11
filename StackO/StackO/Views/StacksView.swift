@@ -28,6 +28,14 @@ struct StacksView: View {
                             .fixedSize(horizontal: false, vertical: true)
                         Spacer()
                     }
+                    .show(isVisible: .constant(self.stackStore.stacks.count == 0 && !self.stackStore.isLoading))
+                    VStack {
+                        ShimmerView().frame(minWidth: 0,  maxWidth: .infinity, minHeight: 60, maxHeight: 60).padding(.top)
+                        ShimmerView().frame(minWidth: 0,  maxWidth: .infinity, minHeight: 60, maxHeight: 60).padding(.top)
+                        ShimmerView().frame(minWidth: 0,  maxWidth: .infinity, minHeight: 60, maxHeight: 60).padding(.top)
+                        Spacer()
+                    }
+                    .show(isVisible: .constant(self.stackStore.isLoading && self.stackStore.stacks.count == 0))
                     ScrollView() {
 
                         ForEach(self.stackStore.stacks, id: \.owner.user_id) { item in

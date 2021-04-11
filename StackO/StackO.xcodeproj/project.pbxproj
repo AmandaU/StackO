@@ -29,6 +29,9 @@
 		AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7312621DBF90047A030 /* BackgroundComponent.swift */; };
 		AA13C7372621DD030047A030 /* DeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7362621DD030047A030 /* DeviceExtensions.swift */; };
 		AA13C73C2621E1050047A030 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C73B2621E1050047A030 /* MainView.swift */; };
+		AAA7116B2623300600169EBE /* StackStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6DE2621CEDA0047A030 /* StackStore.swift */; };
+		AAA7116F2623338400169EBE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6EA2621CF6E0047A030 /* ApiService.swift */; };
+		AAA711732623339000169EBE /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6E42621CF270047A030 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -380,7 +383,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA711732623339000169EBE /* Stack.swift in Sources */,
+				AAA7116B2623300600169EBE /* StackStore.swift in Sources */,
 				AA13C6BA2621CE590047A030 /* StackOTests.swift in Sources */,
+				AAA7116F2623338400169EBE /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

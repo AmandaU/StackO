@@ -3,4 +3,102 @@
    uuid = "EFFA6E4B-0968-4A1D-BB80-710FED8609FF"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "735E3518-A29C-4B2F-AF19-626CF8AF8786"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackO/Stores/StackStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getStacks(searchText:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "735E3518-A29C-4B2F-AF19-626CF8AF8786 - 59d07581cfef7462"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in StackO.StackStore.getStacks(searchText: Swift.String) -&gt; ()"
+                  moduleName = "StackO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amandabaret/Projects/StackO/StackO/StackO/Stores/StackStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "602">
+               </Location>
+               <Location
+                  uuid = "735E3518-A29C-4B2F-AF19-626CF8AF8786 - 76ae3de3d47025b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in StackOTests.StackStore.getStacks(searchText: Swift.String) -&gt; ()"
+                  moduleName = "StackOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amandabaret/Projects/StackO/StackO/StackO/Stores/StackStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "602">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A683DCF-7DF8-4297-8215-03C90E787A05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackO/Stores/StackStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getStacks(searchText:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A683DCF-7DF8-4297-8215-03C90E787A05 - 243835bbb018dcc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (StackO.StackModel) -&gt; () in StackO.StackStore.getStacks(searchText: Swift.String) -&gt; ()"
+                  moduleName = "StackO"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amandabaret/Projects/StackO/StackO/StackO/Stores/StackStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "6A683DCF-7DF8-4297-8215-03C90E787A05 - 40e5768ef3cf4fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (StackOTests.StackModel) -&gt; () in StackOTests.StackStore.getStacks(searchText: Swift.String) -&gt; ()"
+                  moduleName = "StackOTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amandabaret/Projects/StackO/StackO/StackO/Stores/StackStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

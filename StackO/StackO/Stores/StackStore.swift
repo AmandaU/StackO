@@ -15,7 +15,7 @@ class StackStore: ObservableObject {
     @Published var isLoading = false
   
     var cancellationToken: AnyCancellable?
-    var stacksFetched = PassthroughSubject<Void, Never>()
+    var stacksFetched = PassthroughSubject<Bool, Never>()
 
     func getStacks(searchText: String) {
 
@@ -27,13 +27,14 @@ class StackStore: ObservableObject {
                         break
                     case .failure(let error):
                         print("\(error)")
+                        self.stacksFetched.send(false)
                     }
                 }),
             receiveValue: {
                 if !$0.items.isEmpty {
                     self.stacks = $0.items
                 }
-                self.stacksFetched.send()
+                self.stacksFetched.send(true)
             })
     }
 }

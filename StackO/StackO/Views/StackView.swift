@@ -153,7 +153,8 @@ private struct AuthorView: View {
                 Spacer()
             }
              .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-            .background(Color(.systemGray5))
+             .padding(.bottom, UIDevice.current.bottomNotch)
+             .background(Color(.systemGray5))
              .padding(.top, -8)
 
         }

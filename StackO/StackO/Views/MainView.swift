@@ -11,6 +11,10 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var navigationStore: NavigationStore
     @State var animate = false
+
+    @State var currentDate = Date()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         ZStack {
             BackgroundComponent()
@@ -22,7 +26,12 @@ struct MainView: View {
                     Logo(size: 70).scaleEffect(self.animate ? 1 : 0)
                     Logo(size: 80).scaleEffect(self.animate ? 1 : 0)
                     Logo(size: 90).scaleEffect(self.animate ? 1 : 0)
-                    .onTapGesture {
+                        .onTapGesture {
+                            self.navigationStore.navigate(screen: .stacks)
+                        }
+                }
+                .onReceive(timer) { input in
+                    if input > currentDate.addingTimeInterval(6) {
                         self.navigationStore.navigate(screen: .stacks)
                     }
                 }
@@ -31,6 +40,8 @@ struct MainView: View {
                 Spacer()
             }
         }
+        .environmentObject(NavigationStore())
+        .environmentObject(StackStore())
     }
 }
 

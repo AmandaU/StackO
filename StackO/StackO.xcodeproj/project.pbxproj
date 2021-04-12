@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */; };
 		AA03E9A4262200B500AE27BF /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03E9A3262200B500AE27BF /* WebView.swift */; };
-		AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A72621CE580047A030 /* StackOApp.swift */; };
 		AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6A92621CE580047A030 /* ContentView.swift */; };
 		AA13C6AC2621CE590047A030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA13C6AB2621CE590047A030 /* Assets.xcassets */; };
 		AA13C6AF2621CE590047A030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA13C6AE2621CE590047A030 /* Preview Assets.xcassets */; };
@@ -29,9 +28,12 @@
 		AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7312621DBF90047A030 /* BackgroundComponent.swift */; };
 		AA13C7372621DD030047A030 /* DeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C7362621DD030047A030 /* DeviceExtensions.swift */; };
 		AA13C73C2621E1050047A030 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C73B2621E1050047A030 /* MainView.swift */; };
+		AA48F75C262419C30085DB50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA48F75A262419C30085DB50 /* LaunchScreen.storyboard */; };
 		AAA7116B2623300600169EBE /* StackStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6DE2621CEDA0047A030 /* StackStore.swift */; };
 		AAA7116F2623338400169EBE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6EA2621CF6E0047A030 /* ApiService.swift */; };
 		AAA711732623339000169EBE /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA13C6E42621CF270047A030 /* Stack.swift */; };
+		AAE853DE2624191300236C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE853DC2624191300236C28 /* AppDelegate.swift */; };
+		AAE853DF2624191300236C28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE853DD2624191300236C28 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,6 @@
 		AA03E99E2621EDEA00AE27BF /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		AA03E9A3262200B500AE27BF /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AA13C6A42621CE580047A030 /* StackO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA13C6A72621CE580047A030 /* StackOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOApp.swift; sourceTree = "<group>"; };
 		AA13C6A92621CE580047A030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA13C6AB2621CE590047A030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA13C6AE2621CE590047A030 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,6 +81,9 @@
 		AA13C7312621DBF90047A030 /* BackgroundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundComponent.swift; sourceTree = "<group>"; };
 		AA13C7362621DD030047A030 /* DeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceExtensions.swift; sourceTree = "<group>"; };
 		AA13C73B2621E1050047A030 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AA48F75B262419C30085DB50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAE853DC2624191300236C28 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAE853DD2624191300236C28 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +134,15 @@
 		AA13C6A62621CE580047A030 /* StackO */ = {
 			isa = PBXGroup;
 			children = (
+				AA48F759262419C30085DB50 /* Base.lproj */,
+				AAE853DC2624191300236C28 /* AppDelegate.swift */,
+				AAE853DD2624191300236C28 /* SceneDelegate.swift */,
 				AA13C71B2621DB260047A030 /* Components */,
 				AA13C7082621D9800047A030 /* Extensions */,
 				AA13C6F22621D0830047A030 /* Views */,
 				AA13C6E92621CF5E0047A030 /* Services */,
 				AA13C6E32621CF180047A030 /* Models */,
 				AA13C6D52621CEAB0047A030 /* Stores */,
-				AA13C6A72621CE580047A030 /* StackOApp.swift */,
 				AA13C6A92621CE580047A030 /* ContentView.swift */,
 				AA13C6AB2621CE590047A030 /* Assets.xcassets */,
 				AA13C6B02621CE590047A030 /* Info.plist */,
@@ -227,6 +233,14 @@
 				AA13C7312621DBF90047A030 /* BackgroundComponent.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		AA48F759262419C30085DB50 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				AA48F75A262419C30085DB50 /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA48F75C262419C30085DB50 /* LaunchScreen.storyboard in Resources */,
 				AA13C6AF2621CE590047A030 /* Preview Assets.xcassets in Resources */,
 				AA13C6AC2621CE590047A030 /* Assets.xcassets in Resources */,
 			);
@@ -360,6 +375,7 @@
 			files = (
 				AA13C7372621DD030047A030 /* DeviceExtensions.swift in Sources */,
 				AA13C6D72621CEBB0047A030 /* NavigationStore.swift in Sources */,
+				AAE853DE2624191300236C28 /* AppDelegate.swift in Sources */,
 				AA13C72A2621DB570047A030 /* BindingExtension.swift in Sources */,
 				AA13C71D2621DB350047A030 /* SearchBarComponent.swift in Sources */,
 				AA13C6E52621CF270047A030 /* Stack.swift in Sources */,
@@ -372,10 +388,10 @@
 				AA13C7252621DB400047A030 /* ViewComponent.swift in Sources */,
 				AA03E99F2621EDEA00AE27BF /* ViewExtensions.swift in Sources */,
 				AA13C6AA2621CE580047A030 /* ContentView.swift in Sources */,
+				AAE853DF2624191300236C28 /* SceneDelegate.swift in Sources */,
 				AA13C7322621DBF90047A030 /* BackgroundComponent.swift in Sources */,
 				AA03E9A4262200B500AE27BF /* WebView.swift in Sources */,
 				AA13C6DF2621CEDA0047A030 /* StackStore.swift in Sources */,
-				AA13C6A82621CE580047A030 /* StackOApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,17 @@
 			targetProxy = AA13C6C12621CE5A0047A030 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA48F75A262419C30085DB50 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA48F75B262419C30085DB50 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AA13C6C72621CE5A0047A030 /* Debug */ = {
@@ -465,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -520,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -540,7 +567,7 @@
 				DEVELOPMENT_TEAM = 7AHCM58R2R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StackO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,7 +589,7 @@
 				DEVELOPMENT_TEAM = 7AHCM58R2R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = StackO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

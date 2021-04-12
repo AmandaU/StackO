@@ -107,7 +107,7 @@ private struct HeaderView: View {
     var body: some View {
         HStack {
             SearchBarComponent(text: self.$searchText.onChange({ (search) in
-                if search.count > 4 {
+                if search.count > 2 {
                     self.stackStore.getStacks(searchText: search)
                 }
             }))

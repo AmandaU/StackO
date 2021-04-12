@@ -33,8 +33,9 @@ enum StackApi {
 extension StackApi {
 
     static func getStacks(searchText: String) -> AnyPublisher<StackModel, Error> {
+        let valueString = searchText.addingPercentEncoding(withAllowedCharacters: .urlQueryValueAllowed)!
         var request = URLRequest(url:  URL(string: "https://api.stackexchange.com/2.2/questions?pagesize=20&order=desc&sort=activity&tagged=" +
-                                            searchText.replacingOccurrences(of: " ", with: "%20") +
+                                            valueString +
                                             "&site=stackoverflow&filter=withbody")!)
         print(request.url)
 
@@ -50,4 +51,17 @@ extension StackApi {
             .map(\.value)
             .eraseToAnyPublisher()
     }
+}
+
+extension CharacterSet {
+
+static var urlQueryValueAllowed: CharacterSet = {
+    let generalDelimitersToEncode = ":#[]@" // does not include "?" or "/" due to RFC 3986 - Section 3.4
+    let subDelimitersToEncode = "!$&'()*+,;="
+
+    var allowed = CharacterSet.urlQueryAllowed
+    allowed.remove(charactersIn: generalDelimitersToEncode + subDelimitersToEncode)
+
+    return allowed
+}()
 }
